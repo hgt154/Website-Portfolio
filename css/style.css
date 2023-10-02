@@ -115,17 +115,20 @@ body {
     font-size: 50px;
     font-weight: 700;
     line-height: 1.2;
+    padding-bottom: 1rem;
 }
 
 .home-content h3 {
     font-size: 20px;
     font-weight: 700;
     color: #00abf0;
+    padding-bottom: 1rem;
 }
 
 .home-content p {
     font-size: 21px;
     margin: 20px 0 40px;
+    padding-bottom: 1rem;
 }
 
 .home-content .btn-box { 
@@ -256,8 +259,8 @@ body {
 
 .heading {
     font-size: 2rem;
-    padding-top: 50px;
     text-align: center;
+    padding-top: 2rem;
 }
 
 span {
@@ -321,48 +324,31 @@ span {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 5rem;
-    padding-bottom: 2rem;
-    /* min-height: auto; */
-
+    min-height: auto;
+    padding: 2rem 2rem;
 }
 
 .education .education-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 5rem;
+    padding-top: 2rem;
 }
 
 .education-row .education-column {
-    flex: 0 0 40rem;
-    padding-left: 150px;
-    justify-content: space-between;
-    align-items: center;
+    flex: 1 1 40rem;
 }
 
 .education-column .title {
     font-size: 2rem;
-    margin: 0 0 1rem 1.5rem;
-}
-
-.education-column .education-box {
-    border-left: .2rem solid var(--light-blue);
+    margin: 0 0 1.5rem 2rem;
 }
 
 .education-box .education-content {
     position: relative;
-    padding-left: 1rem;
-}
-
-.education-box .education-content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -.6rem;
-    width: 1rem;
-    height: 1rem;
-    background: var(--light-blue);
-    border-radius: 50%;
+    padding-left: 2rem;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
 }
 
 .education-content .content {
@@ -370,7 +356,7 @@ span {
     padding: 1.5rem;
     border: .2rem solid var(--light-blue);
     border-radius: .6rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     overflow: hidden;
 }
 
@@ -384,6 +370,7 @@ span {
     background: var(--light-blue);
     z-index: -1; 
     transition: .5s;
+    opacity: 50%;
 }
 
 .education-content .content:hover::before {
@@ -393,7 +380,7 @@ span {
 .education-content .content .year {
     font-size: 1rem;
     color: var(--light-blue);
-    padding-bottom: .5rem;
+    padding-bottom: 1.5rem;
 }
 
 .education-content .content .year i {
@@ -402,6 +389,7 @@ span {
 
 .education-content .content h3 {
     font-size: 1.3rem;
+    padding-bottom: 1rem;
 }
 /*----X----- education section content -----X----*/
 
@@ -410,19 +398,18 @@ span {
     min-height: auto;
     padding-bottom: 5rem;
     background: black;
-    gap: 5rem;
+    padding: 2rem 2rem;
 }
 
 .skills .skills-row {
     display: flex;
     flex-wrap: wrap;
     gap: 5rem;
-    padding-top: 5rem;
+    padding-top: 2rem;
 }
 
 .skills-row .skills-column {
-    flex: 0 0 40rem;
-    padding-left: 150px;
+    flex: 1 1 40rem;
 }
 
 .skills-column .title {
@@ -434,7 +421,7 @@ span {
     position: relative;
     border: .2rem solid var(--light-blue);
     border-radius: .6rem;
-    padding: .5rem;
+    padding: .5rem 1.5rem;
 }
 
 .skills-content .progress {
@@ -605,12 +592,16 @@ span {
         padding: 2rem 4%;
     }
 
+    .heading {
+        padding-top: .1rem;
+    }
+
     section {
-        padding: 10rem 4% 2rem;
+        padding: 5rem 4% 2rem;
     }
 
     .home {
-        padding: 0 4%;
+        padding: 5rem 4% 2rem;
     }
 
     .footer {
@@ -625,6 +616,10 @@ span {
 
     #menu-icon {
         display: block;
+    }
+
+    .home {
+        font-size: 10%;
     }
    
     .navbar {
