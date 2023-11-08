@@ -319,7 +319,57 @@ span {
 /*----X----- about section content -----X----*/
 
 /*--------- education section content ---------*/
-.education  {
+.education-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    padding-top: 2rem;
+}
+
+.education-column .title {
+    font-size: 2rem;
+    margin: 0 0 1.5rem 2rem;
+}
+
+.education .education-content {
+    padding: 0px 30px;
+    border-left: .2rem solid var(--light-blue);
+}
+
+.education .education-content .content {
+    position: relative;
+    padding: 20px;
+    border: .2rem solid var(--light-blue);
+    border-radius: .6rem;
+    background-color: var(--img-color);
+    cursor: pointer;
+    transition: all 0.4s;
+    margin-bottom: 20px;
+}
+
+.education .education-content .content:hover {
+    box-shadow: 0px 3px 12px 0px #ccc;
+    border: 1px solid transparent;
+}
+
+
+.education-content .content .year {
+    font-size: 1rem;
+    color: var(--light-blue);
+    padding-bottom: 1.5rem;
+}
+
+.education-content .content .year i {
+    padding-right: .5rem;
+}
+
+.education-content .content h3 {
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+}
+
+
+/* .education  {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -390,7 +440,7 @@ span {
 .education-content .content h3 {
     font-size: 1.3rem;
     padding-bottom: 1rem;
-}
+} */
 /*----X----- education section content -----X----*/
 
 /*--------- skills and portfolio presentation section content ---------*/
@@ -433,6 +483,15 @@ span {
     display: flex;
     justify-content: space-between;
 }
+
+.skills-box .skills-content .progress a {
+    color: var(--light-blue);
+}
+
+.skills-box .skills-content .progress a:hover {
+    color: white;
+}
+
 /*----X----- skills and portfolio presentation section content -----X----*/
 
 /*--------- contact form ---------*/
@@ -579,7 +638,205 @@ span {
 }
 /*----X----- footer -----X----*/
 
-/* BREAKPOINTS */
+/*--------- projects.html ---------*/
+
+.header-projects {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: .3s;
+}
+
+.logo-projects {
+    font-size: 25px;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo-projects:hover {
+    color: #00abf0;
+}
+
+/*----- banner -----*/
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 110vh;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: url($bg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.banner::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.contents {
+    position: relative;
+    max-width: 550px;
+    transition: 0.5s;
+    display: none;
+    visibility: hidden;
+    transform: scale(0);
+
+}
+
+.contents.active {
+    display: block;
+    visibility: visible;
+    transform: scale(1);
+    transition: 0.5s;
+    
+}
+
+.contents .tool-title {
+    max-width: 650px;
+    border-radius: 5%;
+}
+
+.banner .contents h4 {
+    font-weight: 400;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.banner .contents h4 span {
+    color: var(--light-blue);
+    padding: 0 10px;
+    border-right: 1.5px solid var(--light-blue);
+}
+
+.banner .contents h4 span:first-child {
+    padding-left: 0;
+}
+
+.banner .contents h4 span:last-child {
+    border-right: none;
+}
+
+.banner .contents p {
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.5em;
+    margin: 10px 0 20px;
+}
+
+.banner .contents .button {
+    position: relative;
+}
+
+.banner .contents .button a {
+    position: relative;
+    display: inline-block;
+    justify-content: space-between;
+    margin-right: 20px;
+    background: var(--light-blue);
+    color: var(--img-color);
+    padding: 6px 20px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.banner .contents .button a:nth-child(2) {
+    background: white;
+    border: 1px solid var(--light-blue);
+    color: var(--img-color);
+}
+
+.banner .contents .button a:hover:nth-child(2) {
+    background: var(--light-blue);
+    color: var(--img-color);
+}
+
+.banner .carousel-box {
+    position: relative;
+    min-width: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: rgba(0, 0, 0, 0.2);
+    box-shadow: 20px 20px 50px, rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 10px; */
+}
+
+.carousel {
+    position: relative;
+    height: 550px;
+    perspective: 1500;
+}
+
+.carousel .carousel-item {
+    width: 550px;
+    cursor: pointer;
+}
+
+.carousel .carousel-item img {
+    max-width: 550px;
+    border-radius: 10px;
+    /* transform: translateX(8px) translateY(-100px); */
+    object-fit: cover;
+    object-position: center;
+    backdrop-filter: blur(20px);
+}
+
+.full-img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.full-img.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.full-img img {
+    max-width: 900px;
+    outline: none;
+
+}
+/*---X-- banner ---X--*/
+
+/*----X----- projects.html -----X----*/
+
+/* BREAKPOINTS index.html */
 @media (max-width: 1200px) {
     html {
         font-size: 55%;
@@ -662,5 +919,60 @@ span {
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
+    }
+}
+
+/* BREAKPOINTS projects.html */
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+
+}
+
+@media (max-width: 991px) {
+    .header-projects {
+        padding: 2rem 4%;
+    }
+
+    .banner {
+        padding: 5rem 4% 2rem;
+        display: block;
+    }
+
+    .carousel-box {
+        padding: 5rem 4% 2rem;
+    }
+
+    .banner .tool-title {
+        padding: 5rem 4% 2rem;
+    }
+
+    .banner p {
+        font-size: 2px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .banner {
+        display: block;
+        padding: 2rem 1% 10rem;
+        font-size: 60%;
+    }
+
+    .carousel-box {
+        padding: 1rem 1%;
+        width: 95%;
+    }
+
+    .tool-title {
+        padding: 1rem 1% 2rem;
+        width: 95%;
+    }
+
+    .banner h4 span {
+        font-size: 80%;
+        padding: 1rem 1%;
     }
 }

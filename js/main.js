@@ -38,3 +38,19 @@ window.onscroll = () => {
     menuIcon.classList.remove('fa-x');
     navbar.classList.remove('active');
 }   
+
+// projects.html -> change bg onclick
+function changeBg(bg, title) {
+    const banner = document.querySelector('.banner');
+    const content = document.querySelectorAll('.contents');
+    banner.style.background = `url("../images/${bg}")`;
+    banner.style.backgroundSize = 'cover';
+    banner.style.backgroundPosition = 'center';
+
+    content.forEach(contents => {
+        contents.classList.remove('active')
+        if (contents.classList.contains(title)) {
+            contents.classList.add('active')
+        }
+    });
+}
